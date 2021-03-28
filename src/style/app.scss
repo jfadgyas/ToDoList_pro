@@ -1,0 +1,119 @@
+
+
+ul{
+    list-style: none;
+    width: 80%; 
+}
+
+li{
+    padding: 1em;
+    border-bottom: 1px solid lightgray;
+}
+
+.list-item{
+    width: 60%;
+    margin: 0 0.5em;
+    border: none;
+    outline: none;
+    color: orangered;
+    transition: 200ms;
+    &:focus{
+        padding: 0.2rem;
+        outline: 1px dotted orangered;
+        background-color: rgba(211, 211, 211, 0.39);
+    }
+}
+
+.__container{
+    position: relative;
+    display: inline;
+}
+.tags{
+    margin-left: 1.5em;
+    position: absolute;
+    left: 100%;
+    width: max-content;
+    padding: 0.2em;
+    background-color: rgb(38, 93, 245);
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform-origin: 0-1em 1em;
+    &::before{
+        content: '';
+        position: absolute;
+        right: 100%;
+        top: 0.8em;
+        margin-top: -0.8em;
+        border: 0.8em solid transparent;
+    }
+    &:nth-child(1){
+        transform: rotateZ(-30deg);
+        
+        &::before{
+            border-right: 1em solid rgb(38, 93, 245);
+        }
+    }
+    &:nth-child(2){
+        background-color: tomato;
+        &::before{
+            border-right: 1em solid tomato;
+        }
+    }
+    &:nth-child(3){
+        transform: rotateZ(30deg);
+        background-color: lime;
+        &::before{
+            border-right: 1em solid lime;
+        }
+    }
+}
+
+.__newitem{
+    width: 40%;
+    margin: 0 0.5em;
+    border: 1px solid orangered;
+    outline: none;
+    color: orangered;
+    transition: 200ms;
+    &:focus{
+        border-style: dotted;
+        padding: 0.2rem;
+        background-color: rgba(211, 211, 211, 0.39);
+    }
+}
+
+.__new--hidden{
+    visibility: hidden;
+    position: relative;
+    height: 0;
+    top: -1em;
+    z-index: -1;
+    transition: 300ms;
+}
+.__new--visible{
+    visibility: visible;
+    height: auto;
+    top: 0;
+    z-index: 1;
+}
+
+.disabled{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.tagfilter{
+    &__container{
+        margin-top: 0.5em;
+    }
+    &__label{
+        display: inline;
+        font-weight: normal;
+        color: orangered;
+    }
+    &__filter{
+        color: orangered;
+        border: 1px solid orangered;
+    }
+}

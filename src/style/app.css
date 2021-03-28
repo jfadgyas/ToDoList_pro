@@ -1,0 +1,136 @@
+ul {
+  list-style: none;
+  width: 80%;
+}
+
+li {
+  padding: 1em;
+  border-bottom: 1px solid lightgray;
+}
+
+.list-item {
+  width: 60%;
+  margin: 0 0.5em;
+  border: none;
+  outline: none;
+  color: orangered;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.list-item:focus {
+  padding: 0.2rem;
+  outline: 1px dotted orangered;
+  background-color: rgba(211, 211, 211, 0.39);
+}
+
+.__container {
+  position: relative;
+  display: inline;
+}
+
+.tags {
+  margin-left: 1.5em;
+  position: absolute;
+  left: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.2em;
+  background-color: #265df5;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-transform-origin: -1em 1em;
+          transform-origin: -1em 1em;
+}
+
+.tags::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 0.8em;
+  margin-top: -0.8em;
+  border: 0.8em solid transparent;
+}
+
+.tags:nth-child(1) {
+  -webkit-transform: rotateZ(-30deg);
+          transform: rotateZ(-30deg);
+}
+
+.tags:nth-child(1)::before {
+  border-right: 1em solid #265df5;
+}
+
+.tags:nth-child(2) {
+  background-color: tomato;
+}
+
+.tags:nth-child(2)::before {
+  border-right: 1em solid tomato;
+}
+
+.tags:nth-child(3) {
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+  background-color: lime;
+}
+
+.tags:nth-child(3)::before {
+  border-right: 1em solid lime;
+}
+
+.__newitem {
+  width: 40%;
+  margin: 0 0.5em;
+  border: 1px solid orangered;
+  outline: none;
+  color: orangered;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.__newitem:focus {
+  border-style: dotted;
+  padding: 0.2rem;
+  background-color: rgba(211, 211, 211, 0.39);
+}
+
+.__new--hidden {
+  visibility: hidden;
+  position: relative;
+  height: 0;
+  top: -1em;
+  z-index: -1;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.__new--visible {
+  visibility: visible;
+  height: auto;
+  top: 0;
+  z-index: 1;
+}
+
+.disabled {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.tagfilter__container {
+  margin-top: 0.5em;
+}
+
+.tagfilter__label {
+  display: inline;
+  font-weight: normal;
+  color: orangered;
+}
+
+.tagfilter__filter {
+  color: orangered;
+  border: 1px solid orangered;
+}
+/*# sourceMappingURL=app.css.map */
